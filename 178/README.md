@@ -1,4 +1,4 @@
-# Rank Scores
+## Rank Scores
 
 Write a SQL query to rank scores. If there is a tie between two scores, both should have the same ranking. Note that after a tie, the next 
 
@@ -37,3 +37,7 @@ For example, given the above Scores table, your query should generate the follow
 select s1.Score as Score, count(s2.Score) as Rank from Scores as s1 left join (select distinct Score from Scores) as s2 on s1.Score <= s2.Score group by s1.id order by s1.Score desc;
 
 ```
+
+## reference
+
+http://blog.csdn.net/wzy_1988/article/details/45173277
